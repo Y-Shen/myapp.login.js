@@ -3,20 +3,31 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/login', function resdsdsds(req, res) {
-  var x = {
-    sucess: true,
+
+  var x1 = {
+    success: true,
     session:'c3749879cdbcb79e7a6b95f3d241a784',
-    sessionTimeout:'3600',
-    friends:[
-      {
+    sessionTimeout:3600,
+    friends:[{
         name:'mike'
       },{
         name:'alice'
       }
-    ]
+    ],
 
   };
-  res.send(x);
+  var x2 = {
+    success:false,
+    text:"Log in again"
+}
+
+  res.send(x2);
+
+  req.params['miao'];
+
 });
+
+
+
 
 module.exports = router;
